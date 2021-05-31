@@ -25,24 +25,27 @@ H_3 = os.environ.get("HASH_3")
 H_4 = os.environ.get("HASH_4")
 H_5 = os.environ.get("HASH_5")
 
+APP_ID = os.environ.get("APP_ID")
+HASH_API = os.environ.get("HASH_API")
+
 OWNER_ID = os.environ.get("OWNER_ID")
 
 TOKEN = os.environ.get("TOKEN")
-tbot = TelegramClient(None, K_1, H_1)
+tbot = TelegramClient(None, APP_ID, HASH_API)
 
-ubot = TelegramClient(StringSession(S_1), K_1, H_1)
-vbot = TelegramClient(StringSession(S_2), K_2, H_2)
-wbot = TelegramClient(StringSession(S_3), K_3, H_3)
-xbot = TelegramClient(StringSession(S_4), K_4, H_4)
-ybot = TelegramClient(StringSession(S_5), K_5, H_5)
+# ubot = TelegramClient(StringSession(S_1), APP_ID, HASH_API)
+vbot = TelegramClient(StringSession(S_2), APP_ID, HASH_API)
+# wbot = TelegramClient(StringSession(S_3), APP_ID, HASH_API)
+# xbot = TelegramClient(StringSession(S_4), APP_ID, HASH_API)
+# ybot = TelegramClient(StringSession(S_5), APP_ID, HASH_API)
 
 
 try:
-  ubot.start()
+  # ubot.start()
   vbot.start()
-  wbot.start()
-  xbot.start()
-  ybot.start()
+  # wbot.start()
+  # xbot.start()
+  # ybot.start()
 except Exception as e:
   print(e)
   sys.exit()

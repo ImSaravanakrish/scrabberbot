@@ -1,4 +1,4 @@
-from RSc import ubot, vbot, wbot, xbot, ybot, OWNER_ID, tbot
+from RSc import vbot,OWNER_ID, tbot
 from telethon import events
 import io, sys, os, traceback
 from telethon.tl.functions.messages import ImportChatInviteRequest
@@ -24,7 +24,7 @@ async def sc(event):
  except:
    return await event.reply("❌Invalid chat provided.")
  s = await event.respond("Starting the Scrapping.")
- client = [ubot, vbot, wbot, xbot, ybot]
+ client = [vbot]
  for x in client:
   try:
     await x(JoinChannelRequest(event.chat.username))

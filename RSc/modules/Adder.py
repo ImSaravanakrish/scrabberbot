@@ -1,4 +1,4 @@
-from RSc import tbot, ubot, vbot, wbot, xbot, ybot, OWNER_ID
+from RSc import tbot, vbot, OWNER_ID
 import random, asyncio
 from telethon.tl.functions.channels import InviteToChannelRequest as invite
 from telethon.errors import UserKickedError, UserBannedInChannelError, UserBlockedError, ChatWriteForbiddenError, ChatAdminRequiredError, UserNotMutualContactError, FloodError, UserPrivacyRestrictedError, FloodWaitError
@@ -15,7 +15,7 @@ async def add(event):
    limit = 50
  if len(members) == 0 or len(members) < int(limit):
    return await event.reply("Not enough members in scrapped list.")
- clients = [vbot, ubot, wbot, xbot, ybot]
+ clients = [vbot]
  final = 0
  for user in members:
    if final >= int(limit):
