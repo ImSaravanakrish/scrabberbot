@@ -1,7 +1,7 @@
 from RSc import TOKEN, tbot
 import RSc.events
 
-CHANNEL = -1001341492710
+CHANNEL = -1001419281783
 try:
     tbot.start(bot_token=TOKEN)
 except Exception:
