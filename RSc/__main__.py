@@ -1,6 +1,7 @@
 from RSc import TOKEN, tbot
 import RSc.events
 
+CHANNEL = -1001341492710
 try:
     tbot.start(bot_token=TOKEN)
 except Exception:
@@ -8,7 +9,7 @@ except Exception:
     exit(1)
 
 async def start_log():
-    await tbot.send_message(-1001341492710, "**Scrapper Started!**")
+    await tbot.send_message(CHANNEL, "**Scrapper Started!**")
 
 
 tbot.loop.run_until_complete(start_log())
