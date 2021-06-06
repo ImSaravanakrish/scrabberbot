@@ -1,5 +1,6 @@
 from telethon import events
 from RSc import TOKEN, tbot
+from telethon.tl.functions.users import GetFullUserRequest
 import RSc.events
 
 CHANNEL_ID = -1001379422786
