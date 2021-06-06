@@ -1,12 +1,10 @@
 from telethon import events
 from RSc import TOKEN, tbot
+from telethon.sync import TelegramClient
 from telethon.tl.functions.users import GetFullUserRequest
 import RSc.events
 
 CHANNEL_ID = -1001379422786
-
-client = TelegramClient(StringSession(string_session), api_id, api_hash)
-client.start()
 
 try:
     tbot.start(bot_token=TOKEN)
@@ -15,7 +13,7 @@ except Exception:
     exit(1)
 
 async def start_log():
-    await client.send_message(
+    await tbot.send_message(
         CHANNEL_ID, "**Scrapper Started!**"
     )
 
