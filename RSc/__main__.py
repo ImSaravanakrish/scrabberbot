@@ -1,3 +1,4 @@
+from telethon import events
 from RSc import TOKEN, tbot
 import RSc.events
 
