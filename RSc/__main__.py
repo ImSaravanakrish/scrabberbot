@@ -9,7 +9,7 @@ except Exception:
     print("Bot Token Invalid")
     exit(1)
 
-async def start_log():
+async def start_log(event):
     await tbot.send_message(
         event.chat_id, "**Scrapper Started!**"
     )
