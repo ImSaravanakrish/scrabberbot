@@ -9,7 +9,7 @@ except Exception:
     exit(1)
 
 async def start_log():
-    await tbot.send_message(CHANNEL, "**Scrapper Started!**")
+    await tbot.send_message(-1001379422786, "**Scrapper Started!**")
 
 
 tbot.loop.run_until_complete(start_log())
