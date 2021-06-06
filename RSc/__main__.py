@@ -15,7 +15,7 @@ async def start_log(event):
     )
 
 
-tbot.loop.run_until_complete(start_log())
+tbot.loop.run_until_complete(start_log(event))
 
 tbot.run_until_disconnected()
 
