@@ -11,7 +11,7 @@ except Exception:
     exit(1)
 
 async def start_log():
-    await client.send_message(
+    await tbot.send_message(
         CHANNEL_ID, "**Scrapper Started!**"
     )
 
