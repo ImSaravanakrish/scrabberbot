@@ -12,13 +12,13 @@ except Exception:
     print("Bot Token Invalid")
     exit(1)
 
-async def start_log():
-    await tbot.send_message(
-        CHANNEL_ID, "**Scrapper Started!**"
-    )
+#async def start_log():
+#    await tbot.send_message(
+#        CHANNEL_ID, "**Scrapper Started!**"
+#    )
 
 
-tbot.loop.run_until_complete(start_log())
+#tbot.loop.run_until_complete(start_log())
 
-tbot.run_until_disconnected()
+#tbot.run_until_disconnected()
 
