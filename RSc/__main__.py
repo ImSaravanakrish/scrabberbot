@@ -1,24 +1,17 @@
+from sys import argv, exit
 from telethon import events
 from RSc import TOKEN, tbot
 from telethon.sync import TelegramClient
 from telethon.tl.functions.users import GetFullUserRequest
 import RSc.events
 
-CHANNEL_ID = -1001379422786
-
 try:
     tbot.start(bot_token=TOKEN)
 except Exception:
-    print("Bot Token Invalid")
+    print("Network Error !")
     exit(1)
 
-async def start_log(event):
-    await tbot.send_message(
-        event.chat_id, "**Scrapper Started!**"
-    )
-
-
-#tbot.loop.run_until_complete(start_log())
-
-#tbot.run_until_disconnected()
-
+if len(argv) not in (1, 3, 4):
+    tbot.disconnect()
+else:
+    tbot.run_until_disconnected()
